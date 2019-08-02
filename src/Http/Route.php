@@ -121,7 +121,7 @@ class Route
      */
     private function imposeCustomRegex()
     {
-        $pattern = $this->path;
+        $pattern = $this->path . '/?';
         foreach ($this->wheres as $where) {
             $param = array_key_first($where);
             $regex = $where[$param];

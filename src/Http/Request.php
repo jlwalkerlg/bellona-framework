@@ -34,7 +34,7 @@ class Request
     {
         $this->session = $session;
 
-        $this->url = rtrim($_GET['url'] ?? '', '/');
+        $this->url = rtrim($_GET['url'] ?? '', '/') . '/';
 
         $postData = $_POST;
         $ajaxData = json_decode(file_get_contents('php://input'), true) ?? [];
